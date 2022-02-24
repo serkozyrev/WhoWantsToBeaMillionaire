@@ -6,6 +6,11 @@ public class LifelineSelection {
     private boolean halfSelected=false;
     private boolean audienceSelected=false;
     private boolean callSelected=false;
+    public void resetLifeline(){
+        halfSelected=false;
+        audienceSelected=false;
+        callSelected=false;
+    }
     public void selectLifeLine(String decision, String question, String answer1, String answer2, String answer3, String answer4, char correctAnswer){
         switch (decision) {
             case "50-50":

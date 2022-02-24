@@ -146,11 +146,18 @@ public class Main {
                                     System.out.println(name + ", Do you want to walk away with " + finalAmount + "?");
 
                                     walkaway = input.nextLine();
+                                    if (walkaway.equals("yes") ){
+                                        select.resetLifeline();
+                                    }
+
                                     exit=l.walkAway(walkaway, exit, finalAmount);
                                 }else if (level == 32000) {
                                     System.out.println(name + ", Do you want to walk away with " + finalAmount + "?");
                                     System.out.println("After this round you will not be able to save any money.");
                                     walkaway = input.nextLine();
+                                    if (walkaway.equals("yes") ){
+                                        select.resetLifeline();
+                                    }
                                     exit=l.walkAway(walkaway, exit, finalAmount);
                                 }else if(level==1000000){
                                     System.out.println("CONGRATULATIONS!!! " + name + " You finished the game and became a MILLIONAIRE. If you want to play again, choose start the game ");
@@ -256,11 +263,17 @@ public class Main {
                                 if (level == 1000) {
                                     System.out.println(name + ", Do you want to walk away with " + finalAmount + "?");
                                     walkaway = input.nextLine();
+                                    if (walkaway.equals("yes") ){
+                                        select.resetLifeline();
+                                    }
                                     exit=l.walkAway(walkaway, exit, finalAmount);
                                 }else if (level == 32000) {
                                     System.out.println(name + ", Do you want to walk away with " + finalAmount + "?");
                                     System.out.println("After this round you will not be able to save any money.");
                                     walkaway = input.nextLine();
+                                    if (walkaway.equals("yes") ){
+                                        select.resetLifeline();
+                                    }
                                     exit=l.walkAway(walkaway, exit, finalAmount);
                                 }else if(level==1000000){
                                     System.out.println("CONGRATULATIONS!!!" + name + "You finished the game and became a MILLIONAIRE. If you want to play again, choose start the game ");
